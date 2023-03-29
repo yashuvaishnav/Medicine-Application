@@ -5,8 +5,369 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: rgb(252, 246, 246);
+            margin: 0;padding: 0;
+        }
+        header{
+            background: white;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        header > #nevbar1{
+            display: flex;
+            justify-content: space-between;
+        }
+        header > #nevbar1 >.nevleft{
+            display: flex;
+            margin-left: 10px;
+        }
+        header > #nevbar1 >.nevleft > h2{
+            display: flex;
+            margin-left: 20px;
+        }
+        header > #nevbar1 >.nevleft > h3{
+            display: flex;
+            margin-left: 20px;
+            margin-top: 25px;
+        }
+        header > #nevbar1 > .nevright{
+            display: flex;
+            align-items: center;
+        }
+        header>#nevbar1>.nevright>a{
+            color: rgb(38, 38, 38);
+            text-decoration: none;
+        }
+        header>#nevbar1>.nevright>button{
+            margin-right: 30px;
+            margin-left: 50px;
+        }
+        #nevbar2{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #nevbar3 > img{
+            margin-right: 1px;
+        }
+        header > p{
+           padding-bottom: 20px;
+            text-align: center; 
+            font-size: 25px;
+            color: rgba(57, 57, 57, 0.763);
+        }
+        .membership > img{
+            margin-left: 130px;
+        }
+        .health-concern{
+            width: 100%;
+            background: white;   
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding-top: 20px;
+        }
+        .health-concern > #health-concern{
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+        }
+        .health-concern > #health-concern > div > img{
+            border-radius: 10px;
+        }
+        .health-concern > #health-concern > div >p{
+            text-align: center;
+        }
+        .health-concern > #health-concern2{
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+        }
+        .health-concern > #health-concern2 > div >p{
+            text-align: center;
+        }
+        .Health-checkup{
+            background: white;
+            width: 100%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding-bottom: 20px;
+        }
+        .Health-checkup  > #Health-checkup{
+            width: 80%;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+        }
+        .Health-checkup  > #Health-checkup > div{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            margin-top: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+            width: 24%;
+        }
+        .Health-checkup > #Health-checkup >div>.div2 > button, .Health-checkup > #Health-checkup >div>.div1 > button{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .Pathology{
+            background: white;
+            width: 100%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding-bottom: 20px;
+        }
+        .Pathology  > #Pathology{
+            width: 80%;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+        }
+        .Pathology > #Pathology> div{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            margin-top: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+            width: 24%;
+        }
+        .Pathology > #Pathology >div>.div2 > button, .Pathology > #Pathology >div>.div1 > button{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .combo-deal{
+            background: white;
+            width: 100%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        .combo-deal > #combo-deal{
+            display: flex;
+            width: 80%;
+            margin: auto;
+            justify-content: space-between;
+        }
+        .combo-deal > #combo-deal> div{
+            width: 14%;
+            padding: 20px 10px;
+        }
+        .combo-deal > #combo-deal> div > h5{
+            color: rgba(57, 57, 57, 0.763);
+        }
+        .Suppliment{
+            background: white;
+            width: 100%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        .Suppliment> #Suppliment{
+            display: flex;
+            width: 80%;
+            margin: auto;
+            justify-content: space-between;
+        }
+        .Suppliment > #Suppliment> div{
+            width: 14%;
+            padding: 20px 10px;
+        }
+        .Suppliment > #Suppliment> div > h5{
+            color: rgba(57, 57, 57, 0.763);
+        }
+        .BP-Moniter{
+            background: white;
+            width: 100%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        .BP-Moniter> #BP-Moniter{
+            display: flex;
+            width: 80%;
+            margin: auto;
+            justify-content: space-between;
+        }
+        .BP-Moniter > #BP-Moniter> div{
+            width: 14%;
+            padding: 20px 10px;
+        }
+        .BP-Moniter > #BP-Moniter> div > h5{
+            color: rgba(57, 57, 57, 0.763);
+        }
+        .Ayurveda-brand{
+            width: 100%;
+            background: white;   
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding-top: 20px;
+        }
+        .Ayurveda-brand > #Ayurveda-brand{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+        }
+        .Ayurveda-brand > #Ayurveda-brand > div > img{
+            border-radius: 10px;
+        }
+        .Ayurveda-brand > #Ayurveda-brand > div >p{
+            text-align: center;
+        }
+        .Radiology{
+            background: white;
+            width: 100%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding-bottom: 20px;
+        }
+        .Radiology  > #Radiology{
+            width: 80%;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+        }
+        .Radiology > #Radiology> div{
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            margin-top: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+            width: 24%;
+        }
+        .Radiology > #Radiology >div>.div2 > button, .Radiology > #Radiology >div>.div1 > button{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        
+
+       
+    </style>
 </head>
 <body>
-    <div>Work Start....</div>
+    <header>
+        <div id="nevbar1"><div class="nevleft"><h2 style="font-family: 'Franklin Gothic Medium'; font-size: 25px;"><i>MEDI 1MG</i></h2><h3 style="color: orange;">MEDICIAN</h3><h3>LAB TESTS</h3><h3>CONSULT DOCTORS</h3><h3>COVID-19</h3><h3>AYURVEDA</h3><h3>CARE PLAN</h3></div> <div class="nevright"><a href="login">Login</a><p><pre> | </pre></p><a href="signup">Signup</a><pre style=" color: rgb(38, 38, 38); font-size: 15px;">  Offer</pre><button>CART</button><pre style="color: rgb(38, 38, 38);font-size: 15px; margin-right: 10px;">  Need Help?</pre></div></div><hr>
+        <div id="nevbar2">
+        <p>Health Resource Center</p><p>Vitamins & Nutrition</p><p>Diabetes</p> <p>Health Devices</p> <p>Personal Care</p> <p>Health Condition</p>  <p>Ayurveda Products</p> <p>Homeopathy</p> <p>Featured</p> <p>Covid Essentials</p></div>
+        <div id="nevbar3"><img src="nev img.png" alt="error"><img src="nev img2.webp" alt="error" width="500px" height="200px"></div>
+        <p>MEDIcare: India’s Leading Online Pharmacy & Healthcare Platform</p>
+    </header>
+
+    <div class="membership"><img src="membersihip.webp" alt="error" width="1200px" height="110px"></div><br>
+    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Shop By Health Concern</p>
+
+    <div class="health-concern">
+        <div id="health-concern">
+            <div><img src="https://tse1.mm.bing.net/th?id=OIP.IeWOEdmEL7RSzOFhcZSn5QHaE8&pid=Api&P=0" alt="error" width="160px" height="120px"><p>Daibetes Care</p></div>
+            <div><img src="https://media.istockphoto.com/photos/chest-pain-is-a-major-health-concern-picture-id889151676?k=6&m=889151676&s=170667a&w=0&h=tkM3JCnOQ18PTi1S-ZEM22AtZfFh0dPNwgKMVX7sQnI=" alt="error" width="160px" height="120px"><p>Cardiac Care</p></div>
+            <div><img src="https://tse3.mm.bing.net/th?id=OIP.lyskBRgWCBMZvJwk0qmumAHaE8&pid=Api&P=0" alt="error" width="160px" height="120px"><p>Stomuch Care</p></div>
+            <div><img src="http://2.bp.blogspot.com/-N1Z8KpxwaMk/TckvT5ac2WI/AAAAAAAAAA8/4FoGn2uMb6c/s1600/Sign_CFL.jpg" alt="error" width="160px" height="120px"><p>Liver Care</p></div>               
+            <div><img src="https://tse1.mm.bing.net/th?id=OIP.C7dc5R5tZ3fWOEuYosWcFAHaE8&pid=Api&P=0" alt="error" width="160px" height="120px"><p>Muscle Care</p></div>
+            <div><img src="https://tse1.mm.bing.net/th?id=OIP.oocubPiy-S8NI1oGXLNE6gHaFE&pid=Api&P=0" alt="error" width="160px" height="120px"><p>Kidney Care</p></div>
+            <div><img src="https://tse2.mm.bing.net/th?id=OIP.IKLbwfRaJ9aEGlp0m8HGRgHaFQ&pid=Api&P=0" alt="error" width="160px" height="120px"><p>Derma Care</p></div>
+        </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Feature Brands</p>
+
+    <div class="health-concern">
+        <div id="health-concern2">
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/12eaa811-857e-470c-b524-786e89f19a3b.png" alt="error" width="120px" ><p>Complan</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/06581157-665e-4b88-b01b-d8e87710b614.png" alt="error" width="120px" height="120px"><p>Iodex</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/37f56f57-2311-4b67-9914-1f7ca10ca254.png" alt="error" width="120px" height="120px"><p>Sri Sri Tattva</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/c3d52eb4-fb59-4292-bd1a-9140f1e58550.png" alt="error" width="120px" height="120px"><p>Dettol</p></div>               
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/2a8ff747-17f9-49ec-8226-c17557e0dd94.png" alt="error" width="120px" height="120px"><p>Mamaearth</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/0544b10b-da23-4bd8-a038-45d7ad150eaf.png" alt="error" width="120px" height="120px"><p>Zandu</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/bbaff823-cc06-4954-b4b2-f7e4356f9237.png" alt="error" width="120px" height="120px"><p>Kapiva Ayurveda</p></div>
+        </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Full body health Checkup</p>
+
+    <div class="Health-checkup">
+        <div id="Health-checkup">
+            <div><h4>Comprehensive Gold Full...</h4><p>Includes 78 tests</p><div class="div1"><span>MEDI 1MG</span><button style="background-color: green; border-radius: 2px; color: white;">4.9 *</button><span>ISO</span></div><br><div class="div2"><span>₹ 2099</span><button style="border: 1px dashed green; color: green;">50% off</button></div></div>
+            <div><h4>Good Health Smart pakag...</h4><p>Includes 3 tests</p><div class="div1"><span>MEDI 1MG</span><button style="background-color: green; border-radius: 2px; ">4.9 *</button><span>ISO</span></div><br><div class="div2"><span>₹ 399</span><button style="border: 1px dashed green; color: green;">50% off</button></div></div>
+            <div><h4>Good Health Silver pakag...</h4><p>Includes 58 tests</p><div class="div1"><span>MEDI 1MG</span><button style="background-color: green; border-radius: 2px;">4.9 *</button><span>ISO</span></div><br><div class="div2"><span>₹ 1099</span><button style="border: 1px dashed green; color: green;">50% off</button></div></div>
+            <div><h4>Comprehensive Silver pkg...</h4><p>Includes 71 tests</p><div class="div1"><span>MEDI 1MG</span><button style="background-color: green; border-radius: 2px;">4.9 *</button><span>ISO</span></div><br><div class="div2"><span>₹ 1699</span><button style="border: 1px dashed green; color: green;">50% off</button></div></div>
+        </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Pathology Tests | Up to 70% off</p>
+
+    <div class="Pathology">
+        <div id="Pathology">
+            <div><h4>Complete Blood Count</h4><p>CBP</p><p>Provide By 4 labs</p><div class="div2"><span>₹ 299</span><button style="border: 1px dashed green; color: green;">25% off</button></div></div>
+            <div><h4>Thyroid Profile Total</h4><p>Thyroid Function Test, TFT</p><p>Provided By 3 Labs</p><div class="div2"><span>₹ 320</span><button style="border: 1px dashed green; color: green;">50% off</button></div></div>
+            <div><h4>Lipid Profile Non Fasting</h4><p>Provided Lab By 1</p><br><br><div class="div2"><span>₹ 320</span><button style="border: 1px dashed green; color: green;">50% off</button></div></div>
+            <div><h4>Vitamin D ( 25-OH )</h4><p>25 Hydroxy Cholecalciferol</p><p>Provided By 3 Labs</p><br><div class="div2"><span>₹ 370</span><button style="border: 1px dashed green; color: green;">50% off</button></div></div>
+        </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Popular Combo Deals</p>
+
+    <div class="combo-deal">
+           <div id="combo-deal">
+                <div><img src="https://binsinaimages.azureedge.net/images/catalogimages/47500_1.jpg" alt="err" width="100px" height="100px"><p>Tata 1 MG Diabetes Combo Pack For...</p><h5>Combo Pack of 1 bottal</h5><br><span>MRP₹1080</span><span style="color: green;">46% off</span><p>₹582</p></div>
+                <div><img src="https://i5.walmartimages.com/asr/f8e44fed-dc9b-46c9-aa27-96ea3b2d131a_1.1781e4bd2f2752e31edcb10e63dcf9dd.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff" alt="err" width="100px" height="100px"><p>Accu-check Combo  of Active Strip...</p><h5>Combo Pack of 1 Pack</h5><br><span>MRP₹1299</span><span style="color: green;">6% off</span><p>₹1214</p></div>
+                <div><img src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/chhztnicpol5qb1smjuf.jpg" alt="err" width="100px" height="100px"><p>Combo Pack Of Tata 1MG Multivitamin</p><h5>Combo Pack of 2 Packs</h5><br><span>MRP₹1644</span><span style="color: green;">49% off</span><p>₹835</p></div>
+                <div><img src="https://store.jiva.com/wp-content/uploads/2020/08/panch-tulsi-2.png" alt="err" width="100px" height="100px"><p>Immunity Care Combo of 1MG Tulsi...</p><h5>Combo Pack of 2 Packs</h5><br><span>MRP₹335</span><span style="color: green;">28% off</span><p>₹240</p></div>
+                <div><img src="https://i5.walmartimages.com/asr/4f1ae020-222b-4502-92e8-51fb4560f24a_1.cb50f0297ca73da5f77b3bf39acb634b.jpeg" alt="err" width="100px" height="100px"><p>Acne Care Combo of Catephile Oily Skin</p><h5>Combo Pack of 2 Packs</h5><br><span>MRP₹820</span><span style="color: green;">15% off</span><p>₹694</p></div>
+                <div><img src="https://tse1.mm.bing.net/th?id=OIP.TRWsuMI4F9gVqbBu0XYRiAHaHa&pid=Api&P=0" alt="err" width="100px" height="100px"><p>Accu-check Active Combo Glucometer</p><h5>Combo Pack of 2 Packs</h5><br><span>MRP₹2048</span><span style="color: green;">8% off</span><p>₹1847</p></div>
+                <div><img src="https://cdn01.pharmeasy.in/dam/products_otc/131677/one-touch-select-glucometer-test-strips-bottle-of-25-2-1609832341.jpg" alt="err" width="100px" height="100px"><p>Accu-check Active Combo Glucometer</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2612</span><span style="color: green;">13% off</span><p>₹2267</p></div>
+            </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Iron | supplement of the week</p>
+
+    <div class="Suppliment">
+        <div id="Suppliment">
+             <div><img src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/c5ae6c9d8a6d44fa829eb1edebf193b2.jpg" alt="err" width="100px" height="100px"><p>1mg Super Antiuxident Multiminral...</p><h5>Combo Pack of 1 bottal</h5><br><span>MRP₹495</span><span style="color: green;">65% off</span><p>₹173</p></div>
+             <div><img src="https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/tfrd2renownxxtez1i6e.jpg" alt="err" width="100px" height="100px"><p>iFor U Tablet</p><h5>Combo Pack of 1 Pack</h5><br><span>MRP₹199</span><span style="color: green;">11% off</span><p>₹176</p></div>
+             <div><img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/9/8906113261890.jpg" alt="err" width="100px" height="100px"><p>Himalaya Organics Plant Bases Iron</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1095</span><span style="color: green;">45% off</span><p>₹599</p></div>
+             <div><img src="https://5.imimg.com/data5/QT/JD/MY-24746280/biotrex-iron-ferrous-fumarate-65mg-60-tablets-500x500.jpg" alt="err" width="100px" height="100px"><p>Biotrex Iron 65mg Capsule</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹250</span><span style="color: green;">4% off</span><p>₹240</p></div>
+             <div><img src="https://s3.images-iherb.com/sol/sol00680/l/39.jpg" alt="err" width="100px" height="100px"><p>Solgar Chelated Iron Tablets</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹3999</span><span style="color: green;">37% off</span><p>₹2499</p></div>
+             <div><img src="https://www.netmeds.com/images/product-v1/600x600/858138/inlife_iron_folic_acid_tablets_60s_77970_0_2.jpg" alt="err" width="100px" height="100px"><p>inlife Iron Folic Acid Suppliment...</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹600</span><span style="color: green;">51% off</span><p>₹290</p></div>
+             <div><img src="https://onemg.gumlet.io/image/upload/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/v1620284208/j0dpmgofhtkfxnqstw2j.jpg" alt="err" width="100px" height="100px"><p>Healthvit Iron 17mg Tablets</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹250</span><span style="color: green;">19% off</span><p>₹201</p></div>
+         </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">BP Moniter</p>
+
+    <div class="BP-Moniter">
+        <div id="BP-Moniter">
+             <div><img src="https://tse3.mm.bing.net/th?id=OIP.6chy1dxfCwUBqekmJVduRAHaHa&pid=Api&P=0" alt="err" width="100px" height="100px"><p>1mg Tata Blood Pressure Proven</p><h5>Combo Pack of 1 bottal</h5><br><span>MRP₹1500</span><span style="color: green;">10% off</span><p>₹1350</p></div>
+             <div><img src="https://tse1.mm.bing.net/th?id=OIP.CRdq-iiAEeYL7y46DQXydAHaHa&pid=Api&P=0" alt="err" width="100px" height="100px"><p>Lot Fancy Blood Pressure HEMB-1010</p><h5>Combo Pack of 1 Pack</h5><br><span>MRP₹1199</span><span style="color: green;">11% off</span><p>₹1000</p></div>
+             <div><img src="https://i5.walmartimages.com/asr/b3af7859-b1e0-4e61-9cd4-b90a5fdfa4f0.f107d92ec35480e391d76f9e5e577406.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff" alt="err" width="100px" height="100px"><p>Omrone HEM-7120 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2005</span><span style="color: green;">25% off</span><p>₹1599</p></div>
+             <div><img src="https://i.ebayimg.com/images/g/B54AAOSwTO9eTf4f/s-l640.jpg" alt="err" width="100px" height="100px"><p>Dr Morepan BP D2 Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2000</span><span style="color: green;">5% off</span><p>₹1900</p></div>
+             <div><img src="https://img.waimaoniu.net/930/930-201810221353587402.jpg" alt="err" width="100px" height="100px"><p>24 Hour Blood Pressure Moninter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹999</span><span style="color: green;">500% off</span><p>₹499</p></div>
+             <div><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/2851/2851063_sd.jpg" alt="err" width="100px" height="100px"><p>Omrone HEM-1720 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1200</span><span style="color: green;">10% off</span><p>₹1100</p></div>
+             <div><img src="https://tse3.mm.bing.net/th?id=OIP.drVMmQ6e306GhKuFscvzeQHaHa&pid=Api&P=0" alt="err" width="100px" height="100px"><p>Contect HEM 7120 Bp Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1500</span><span style="color: green;">25% off</span><p>₹1201</p></div>
+         </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Ayurveda top brands</p>
+
+    <div class="Ayurveda-brand">
+        <div id="Ayurveda-brand">
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/onneibznnitqsn5twumi.png" alt="error" width="120px" ><p>Dabar</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/dekl61bd9thu21vmypkm.png" alt="error" width="120px" height="120px"><p>Baidyanath</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/idgjl700nkz6w8lzvjwc.png" alt="error" width="120px" height="120px"><p>Dootapapeshwar</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/yv774ayhbypuxi28dhs0.png" alt="error" width="120px" height="120px"><p>TATA 1MG</p></div>               
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/xemgonnppssxvagkjxzd.png" alt="error" width="120px" height="120px"><p>Himalaya</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/guiy84rk41kgofd5atft.png" alt="error" width="120px" height="120px"><p>Jiva Ayurveda</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/shxhntpjye31tu8frfjs.png" alt="error" width="120px" height="120px"><p>Kerela Ayurveda</p></div>
+        </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Radiology Tests | Up to 60% off</p>
+
+    <div class="Radiology">
+        <div id="Radiology">
+            <div><h4>Complete Blood Count</h4><p>CBP</p><p>Provide By 4 labs</p><div class="div2"><span>₹ 299</span><button style="border: 1px dashed green; color: green;">25% off</button></div></div>
+            <div><h4>Thyroid Profile Total</h4><p>Thyroid Function Test, TFT</p><p>Provided By 3 Labs</p><div class="div2"><span>₹ 320</span><button style="border: 1px dashed green; color: green;">50% off</button></div></div>
+            <div><h4>Lipid Profile Non Fasting</h4><p>Provided Lab By 1</p><br><br><div class="div2"><span>₹ 320</span><button style="border: 1px dashed green; color: green;">50% off</button></div></div>
+            <div><h4>Vitamin D ( 25-OH )</h4><p>25 Hydroxy Cholecalciferol</p><p>Provided By 3 Labs</p><br><div class="div2"><span>₹ 370</span><button style="border: 1px dashed green; color: green;">50% off</button></div></div>
+        </div>
+    </div>
+
 </body>
 </html>
