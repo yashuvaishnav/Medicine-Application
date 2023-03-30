@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            box-sizing: border-box;
-        }
+        /* *{
+          
+            box-sizing: border-box; */
+        /* } */
         body{
             background: rgb(252, 246, 246);
             margin: 0;padding: 0;
+            box-sizing: border-box;
         }
         header{
             background: white;
@@ -94,6 +96,7 @@
             width: 100%;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             padding-bottom: 20px;
+            line-height: 5px;
         }
         .Health-checkup  > #Health-checkup{
             width: 80%;
@@ -125,6 +128,7 @@
             display: flex;
             margin: auto;
             justify-content: space-between;
+            line-height: 5px;
         }
         .Pathology > #Pathology> div{
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -222,6 +226,7 @@
             display: flex;
             margin: auto;
             justify-content: space-between;
+            line-height: 5px;
         }
         .Radiology > #Radiology> div{
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -235,7 +240,124 @@
         .Radiology > #Radiology >div>.div2 > button, .Radiology > #Radiology >div>.div1 > button{
             margin-left: 10px;
             margin-right: 10px;
+            
         }
+        .bottom{
+            margin-top: 30px ;
+            background: white;
+            padding-top: 30px;
+            padding-right: 30px;
+            padding-left: 30px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;     
+        }
+        footer{
+            margin: 0;
+        }
+        footer>#footer1{
+            background: white; 
+        }
+        footer>#footer1>p{
+            text-align: center;
+            font-size: 25px;
+            padding-top: 20px;
+        }
+        footer>#footer1>#footParant{
+            display: flex;
+            justify-content: space-around;
+        }
+        footer>#footer1>#footParant>div>p{
+           font-size: 30px;
+        }
+        footer>#footer1>#footParant>div{
+           line-height: 1px;
+           text-align: center;
+           padding-bottom: 30px;
+        }
+        footer>#footer2{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-top: 0px;
+            background: white;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        footer>#footer2>div>p{
+            font-size: 21px;
+        }
+        footer>#footer2>div>button{
+            height: 40px;
+            width: 110px;
+            padding: 10px;
+            margin-left: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            background: rgb(255,91,79);
+            color: white;
+            border: none;
+        }
+        footer>#footer2>div>input{
+            height: 40px;
+            margin-left: 10px;
+            margin-top:15px ;
+            width: 300px;
+            padding-left: 10px;
+            background: rgba(237, 237, 237, 0.945);
+            border: none;
+        }
+        footer > #footer3{
+            display: flex;
+            justify-content: space-around;
+            line-height: 10px;
+            padding: 40px;
+        }
+        footer > #footer3>div>p>a{
+            text-decoration: none;
+            color: gray;
+        }
+        footer > #footer3>div>button{
+            height: 35px;
+            width: 90px;
+            padding: 10px;
+            margin-left: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            background: rgb(255,91,79);
+            color: white;
+            border: none;
+        }
+        footer > #footer3 > div:nth-child(4){
+            line-height: 1px; 
+        }
+        footer>#footer4{
+            display: flex;
+            justify-content: space-evenly;
+            width: 80%;
+            margin: auto;
+        }
+        footer>#footer4>div{
+            display: flex;
+        }
+        footer>#footer4>div>img{
+            margin-top: 20px;
+        }
+        
+        footer>#footer5>div{
+            display: flex;
+            justify-content: center;
+        }
+        footer>#footer5>div>img{
+            margin-left: 30px;
+            margin-top: 50px;
+        }
+        footer>#footer5>h3{
+            text-align: center;
+        }
+        footer>#footer6{
+            margin: 30px;
+        }
+
 
     </style>
        
@@ -279,7 +401,7 @@
         </div>
     </div>
 
-    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Full body health Checkup</p>
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">Full body health Checkup</p>
 
     <div class="Health-checkup">
         <div id="Health-checkup">
@@ -290,7 +412,7 @@
         </div>
     </div>
 
-    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Pathology Tests | Up to 70% off</p>
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">Pathology Tests | Up to 70% off</p>
 
     <div class="Pathology">
         <div id="Pathology">
@@ -301,7 +423,7 @@
         </div>
     </div>
 
-    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Popular Combo Deals</p>
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">Popular Combo Deals</p>
 
     <div class="combo-deal">
            <div id="combo-deal">
@@ -315,7 +437,7 @@
             </div>
     </div>
 
-    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Iron | supplement of the week</p>
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">Iron | supplement of the week</p>
 
     <div class="Suppliment">
         <div id="Suppliment">
@@ -329,7 +451,7 @@
          </div>
     </div>
 
-    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">BP Moniter</p>
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">BP Moniter</p>
 
     <div class="BP-Moniter">
         <div id="BP-Moniter">
@@ -343,7 +465,7 @@
          </div>
     </div>
 
-    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Ayurveda top brands</p>
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">Ayurveda top brands</p>
 
     <div class="Ayurveda-brand">
         <div id="Ayurveda-brand">
@@ -357,7 +479,7 @@
         </div>
     </div>
 
-    <p style="font-size: 20px; margin-left: 70px; color: rgba(57, 57, 57, 0.763);">Radiology Tests | Up to 60% off</p>
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">Radiology Tests | Up to 60% off</p>
 
     <div class="Radiology">
         <div id="Radiology">
@@ -367,6 +489,216 @@
             <div><h4>Vitamin D ( 25-OH )</h4><p>25 Hydroxy Cholecalciferol</p><p>Provided By 3 Labs</p><br><div class="div2"><span>₹ 370</span><button style="border: 1px dashed green; color: green;">50% off</button></div></div>
         </div>
     </div>
+
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">In The Spotlight</p>
+
+    <div class="BP-Moniter">
+        <div id="BP-Moniter">
+             <div><img src="https://images.heb.com/is/image/HEBGrocery/001285816" alt="err" width="100px" height="100px"><p>1mg Tata Blood Pressure Proven</p><h5>Combo Pack of 1 bottal</h5><br><span>MRP₹1500</span><span style="color: green;">10% off</span><p>₹1350</p></div>
+             <div><img src="https://media.clickoncare.com/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/_/0/_0006s_0005_layer-6-8342873291.jpg" alt="err" width="100px" height="100px"><p>Lot Fancy Blood Pressure HEMB-1010</p><h5>Combo Pack of 1 Pack</h5><br><span>MRP₹1199</span><span style="color: green;">11% off</span><p>₹1000</p></div>
+             <div><img src="https://cdn01.pharmeasy.in/dam/products_otc/I11325/moov-pain-relief-ointment-tube-of-10-g-2-1613117763.jpg" alt="err" width="100px" height="100px"><p>Omrone HEM-7120 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2005</span><span style="color: green;">25% off</span><p>₹1599</p></div>
+             <div><img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/2/8/28f4aecnykcaf0000054_1.jpg" alt="err" width="100px" height="100px"><p>Dr Morepan BP D2 Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2000</span><span style="color: green;">5% off</span><p>₹1900</p></div>
+             <div><img src="https://shop.shajgoj.com/wp-content/uploads/2020/08/Mamaearth-vitamin-C-face-wash-with-vitamin-C-and-turmeric-for-skin-illumination1.jpg" alt="err" width="100px" height="100px"><p>24 Hour Blood Pressure Moninter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹999</span><span style="color: green;">500% off</span><p>₹499</p></div>
+             <div><img src="https://tse4.mm.bing.net/th?id=OIP.U4egCNUqAnUPZQ1n74nNewHaHg&pid=Api&P=0" alt="err" width="100px" height="100px"><p>Omrone HEM-1720 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1200</span><span style="color: green;">10% off</span><p>₹1100</p></div>
+             <div><img src="https://m.media-amazon.com/images/I/61-kNYpz43L._SL1500_.jpg" alt="err" width="100px" height="100px"><p>Contect HEM 7120 Bp Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1500</span><span style="color: green;">25% off</span><p>₹1201</p></div>
+         </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">Trading Now</p>
+
+    <div class="BP-Moniter">
+        <div id="BP-Moniter">
+             <div><img src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/rt6spzegvqrnmkccngyj.jpg" alt="err" width="100px" height="100px"><p>1mg Tata Blood Pressure Proven</p><h5>Combo Pack of 1 bottal</h5><br><span>MRP₹1500</span><span style="color: green;">10% off</span><p>₹1350</p></div>
+             <div><img src="https://www.harishfoodzone.com/jb-content/uploads/2020/06/Glucon-D-Instant-Energy-Health-Drink-Tangy-Orange-1.jpg" alt="err" width="100px" height="100px"><p>Lot Fancy Blood Pressure HEMB-1010</p><h5>Combo Pack of 1 Pack</h5><br><span>MRP₹1199</span><span style="color: green;">11% off</span><p>₹1000</p></div>
+             <div><img src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/oh27qanoszkuakdrpl35.jpg" alt="err" width="100px" height="100px"><p>Omrone HEM-7120 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2005</span><span style="color: green;">25% off</span><p>₹1599</p></div>
+             <div><img src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/tviyryxxmvhqxfj0rwbl.jpg" alt="err" width="100px" height="100px"><p>Dr Morepan BP D2 Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2000</span><span style="color: green;">5% off</span><p>₹1900</p></div>
+             <div><img src="https://demandsforever.com/wp-content/uploads/2020/09/glucon-d-tangy-orange-flavour-450-gm1-1.jpg" alt="err" width="100px" height="100px"><p>24 Hour Blood Pressure Moninter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹999</span><span style="color: green;">500% off</span><p>₹499</p></div>
+             <div><img src="https://tse4.mm.bing.net/th?id=OIP.0Ln0PqkKNH25AX2_AFuyCgHaHa&pid=Api&P=0" alt="err" width="100px" height="100px"><p>Omrone HEM-1720 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1200</span><span style="color: green;">10% off</span><p>₹1100</p></div>
+             <div><img src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/gmkrpf1imjj9djwvq4gq.jpg" alt="err" width="100px" height="100px"><p>Contect HEM 7120 Bp Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1500</span><span style="color: green;">25% off</span><p>₹1201</p></div>
+         </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">Deal Of The Day</p>
+
+    <div class="BP-Moniter">
+        <div id="BP-Moniter">
+             <div><img src="https://media.clickoncare.com/catalog/product/cache/1/image/600x/9df78eab33525d08d6e5fb8d27136e95/m/o/mojocare-psd_0000s_0000_vm3tjfpg-5409520682.jpg" alt="err" width="100px" height="100px"><p>1mg Tata Blood Pressure Proven</p><h5>Combo Pack of 1 bottal</h5><br><span>MRP₹1500</span><span style="color: green;">10% off</span><p>₹1350</p></div>
+             <div><img src="https://res.cloudinary.com/du8msdgbj/image/upload/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/v1606482972/wwpiffcwugbfqfphj0eh.jpg" alt="err" width="100px" height="100px"><p>Lot Fancy Blood Pressure HEMB-1010</p><h5>Combo Pack of 1 Pack</h5><br><span>MRP₹1199</span><span style="color: green;">11% off</span><p>₹1000</p></div>
+             <div><img src="https://img.alicdn.com/imgextra/i1/6000000007608/O1CN017hBuow264VqN7CnV6_!!6000000007608-0-tbvideo.jpg" alt="err" width="100px" height="100px"><p>Omrone HEM-7120 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2005</span><span style="color: green;">25% off</span><p>₹1599</p></div>
+             <div><img src="https://i5.walmartimages.com/asr/b1acbbf0-3b16-426d-b157-5c453244e75c.c0b3313c68b450abceb28600377f1c40.jpeg" alt="err" width="100px" height="100px"><p>Dr Morepan BP D2 Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2000</span><span style="color: green;">5% off</span><p>₹1900</p></div>
+             <div><img src="https://tse1.mm.bing.net/th?id=OIP.PzSY9euFOWeAxmaTrSPZywHaHa&pid=Api&P=0" alt="err" width="100px" height="100px"><p>24 Hour Blood Pressure Moninter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹999</span><span style="color: green;">500% off</span><p>₹499</p></div>
+             <div><img src="https://cdn01.pharmeasy.in/dam/products/202086/omnigel-gel-10gm-combo-3-1597361129.jpg" alt="err" width="100px" height="100px"><p>Omrone HEM-1720 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1200</span><span style="color: green;">10% off</span><p>₹1100</p></div>
+             <div><img src="https://tse3.mm.bing.net/th?id=OIP.5Sf3SE3sSZHX9UT9gLXhsAHaHa&pid=Api&P=0" alt="err" width="100px" height="100px"><p>Contect HEM 7120 Bp Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1500</span><span style="color: green;">25% off</span><p>₹1201</p></div>
+         </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">Homeopathy women's health</p>
+
+    <div class="BP-Moniter">
+        <div id="BP-Moniter">
+             <div><img src="https://www.themgshop.com/wp-content/uploads/2020/06/SBL-Damiana-Mother-Tincture-1XQ-30ml.jpg" alt="err" width="100px" height="100px"><p>1mg Tata Blood Pressure Proven</p><h5>Combo Pack of 1 bottal</h5><br><span>MRP₹1500</span><span style="color: green;">10% off</span><p>₹1350</p></div>
+             <div><img src="https://onemg.gumlet.io/image/upload/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/v1600155066/cropped/jtiecy4rabb926yc2kac.jpg" alt="err" width="100px" height="100px"><p>Lot Fancy Blood Pressure HEMB-1010</p><h5>Combo Pack of 1 Pack</h5><br><span>MRP₹1199</span><span style="color: green;">11% off</span><p>₹1000</p></div>
+             <div><img src="https://s3.amazonaws.com/images.ecwid.com/images/2687034/953364965.jpg" alt="err" width="100px" height="100px"><p>Omrone HEM-7120 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2005</span><span style="color: green;">25% off</span><p>₹1599</p></div>
+             <div><img src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/sw7tkkspygextrftjhxu.jpg" alt="err" width="100px" height="100px"><p>Dr Morepan BP D2 Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2000</span><span style="color: green;">5% off</span><p>₹1900</p></div>
+             <div><img src="https://onemg.gumlet.io/image/upload/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/v1617171088/ldbdevvesb5vavgq7qk4.jpg" alt="err" width="100px" height="100px"><p>24 Hour Blood Pressure Moninter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹999</span><span style="color: green;">500% off</span><p>₹499</p></div>
+             <div><img src="https://www.netmeds.com/images/product-v1/600x600/850588/sbl_aurum_muriaticum_natronatum_6x_tablet_25_gm_0.jpg" alt="err" width="100px" height="100px"><p>Omrone HEM-1720 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1200</span><span style="color: green;">10% off</span><p>₹1100</p></div>
+             <div><img src="https://5.imimg.com/data5/SELLER/Default/2023/2/ZT/FY/UK/30255828/allen-a90-ovarian-cysts-drops-500x500.jpg" alt="err" width="100px" height="100px"><p>Contect HEM 7120 Bp Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1500</span><span style="color: green;">25% off</span><p>₹1201</p></div>
+         </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">Healthcare devices - top brands</p>
+
+    <div class="Ayurveda-brand">
+        <div id="Ayurveda-brand">
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/25832f67-b59e-4c68-81a0-6b67ce0b1a6e.webp" alt="error" width="120px" ><p>Dr. Morapen</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/5b24fd4f-ddbe-4b53-b1d3-97107c44762b.webp" alt="error" width="120px" height="120px"><p>Accu-Check</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/c3015a12-3ac7-48d2-92c9-072bc9113010.webp" alt="error" width="120px" height="120px"><p>Omeron</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/c932de9c-ee8b-4edf-ae6b-8b9c882bcb79.webp" alt="error" width="120px" height="120px"><p>Contour</p></div>               
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/751cc51d-a84e-499e-afe6-7f2197684471.webp" alt="error" width="120px" height="120px"><p>One Touch</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/d6f2e4a2-1dd8-43fe-ae99-fe61777f478d.webp" alt="error" width="120px" height="120px"><p>Dr Trust</p></div>
+            <div><img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/32571bdc-487c-4ebe-98f9-9aa91464fd76.webp" alt="error" width="120px" height="120px"><p>Tynor</p></div>
+        </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">Minimum 30% OFF</p>
+
+    <div class="BP-Moniter">
+        <div id="BP-Moniter">
+             <div><img src="https://tse3.mm.bing.net/th?id=OIP.e0ny2WIFBuHNbpmsD3Qq-gHaHa&pid=Api&P=0" alt="err" width="100px" height="100px"><p>1mg Tata Blood Pressure Proven</p><h5>Combo Pack of 1 bottal</h5><br><span>MRP₹1500</span><span style="color: green;">10% off</span><p>₹1350</p></div>
+             <div><img src="https://www.netmeds.com/images/product-v1/600x600/913819/cf_novasules_woman_multivitamin_for_women_with_probiotics_veg_tablet_60s_0_0.jpg" alt="err" width="100px" height="100px"><p>Lot Fancy Blood Pressure HEMB-1010</p><h5>Combo Pack of 1 Pack</h5><br><span>MRP₹1199</span><span style="color: green;">11% off</span><p>₹1000</p></div>
+             <div><img src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/8d6e7782005e4b41899cb29b0bcc332f.jpg" alt="err" width="100px" height="100px"><p>Omrone HEM-7120 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2005</span><span style="color: green;">25% off</span><p>₹1599</p></div>
+             <div><img src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/7f2207e149c14084a35749a3abef3e48.jpg" alt="err" width="100px" height="100px"><p>Dr Morepan BP D2 Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2000</span><span style="color: green;">5% off</span><p>₹1900</p></div>
+             <div><img src="https://cdn.shopify.com/s/files/1/0596/1836/1543/products/BG03_25strips_1200x.jpg?v=1637159018" alt="err" width="100px" height="100px"><p>24 Hour Blood Pressure Moninter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹999</span><span style="color: green;">500% off</span><p>₹499</p></div>
+             <div><img src="https://www.jiomart.com/images/product/600x600/rvpu4f64jz/dr-morepen-omega-3-fish-oil-triple-strength-1250-mg-for-heart-health-brain-60-softgels-product-images-orvpu4f64jz-p590822650-0-202206181430.jpg" alt="err" width="100px" height="100px"><p>Omrone HEM-1720 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1200</span><span style="color: green;">10% off</span><p>₹1100</p></div>
+             <div><img src="https://cdn10.bigcommerce.com/s-deua3i9d/products/10723/images/24361/658010113687__77980.1464897242.1280.1280.jpg?c=2" alt="err" width="100px" height="100px"><p>Contect HEM 7120 Bp Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1500</span><span style="color: green;">25% off</span><p>₹1201</p></div>
+         </div>
+    </div>
+
+    <p style="font-size: 20px; margin-left: 150px; color: rgba(57, 57, 57, 0.763);">Oxyzen Concerntrator</p>
+
+    <div class="BP-Moniter">
+        <div id="BP-Moniter">
+             <div><img src="https://tse4.mm.bing.net/th?id=OIP.lXK1fHOOXbxJHKvp-IU7cwHaHa&pid=Api&P=0" alt="err" width="100px" height="100px"><p>1mg Tata Blood Pressure Proven</p><h5>Combo Pack of 1 bottal</h5><br><span>MRP₹1500</span><span style="color: green;">10% off</span><p>₹1350</p></div>
+             <div><img src="https://image.made-in-china.com/2f0j00giHfFyvEHGcb/Ce-Approved-Medical-5L-93-O2-Purity-Oxygen-Concentrator.jpg" alt="err" width="100px" height="100px"><p>Lot Fancy Blood Pressure HEMB-1010</p><h5>Combo Pack of 1 Pack</h5><br><span>MRP₹1199</span><span style="color: green;">11% off</span><p>₹1000</p></div>
+             <div><img src="https://tse2.mm.bing.net/th?id=OIP.l9wLFndmln58neuwrKQOlQHaHa&pid=Api&P=0" alt="err" width="100px" height="100px"><p>Omrone HEM-7120 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2005</span><span style="color: green;">25% off</span><p>₹1599</p></div>
+             <div><img src="https://tse4.mm.bing.net/th?id=OIP.tr2mjWqVrnbKFFZH_3g0EAHaHa&pid=Api&P=0" alt="err" width="100px" height="100px"><p>Dr Morepan BP D2 Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹2000</span><span style="color: green;">5% off</span><p>₹1900</p></div>
+             <div><img src="https://image.made-in-china.com/2f0j00LUaGuvtnjYqT/Flow-Home-Medical-Stationary-Oxygen-Concentrator-with-Ce-Certificated-OLV-10-.jpg" alt="err" width="100px" height="100px"><p>24 Hour Blood Pressure Moninter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹999</span><span style="color: green;">500% off</span><p>₹499</p></div>
+             <div><img src="https://tse3.mm.bing.net/th?id=OIP.Dbd-NkpG-F0T2KSqF5SUCQHaHa&pid=Api&P=0" alt="err" width="100px" height="100px"><p>Omrone HEM-1720 BP Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1200</span><span style="color: green;">10% off</span><p>₹1100</p></div>
+             <div><img src="https://ecaremedicalsupplies.com/products/respiratory/oxygen-concentrators/images/110110002-1-min.jpg" alt="err" width="100px" height="100px"><p>Contect HEM 7120 Bp Moniter</p><h5>Combo Pack of 1 Packs</h5><br><span>MRP₹1500</span><span style="color: green;">25% off</span><p>₹1201</p></div>
+         </div>
+    </div>
+
+    <div class="bottom">
+        <h2>Stay Healthy with Tata 1mg: Your Favourite Online Pharmacy and Healthcare Platform</h2>
+        <h3>We Bring Care to Health.</h3>
+        <p>Tata 1mg is India's leading online chemist with over 2 lakh medicines available at the best prices. We are your one-stop destination for other healthcare products as well, such as over the counter pharmaceuticals, healthcare devices and homeopathy and ayurveda medicines.</p>
+        <p>With Tata 1mg, you can buy medicines online and get them delivered at your doorstep anywhere in India! But, is ordering medicines online a difficult process? Not at all! Simply search for the products you want to buy, add to cart and checkout. Now all you need to do is sit back as we get your order delivered to you.</p>
+        <p>In case you need assistance, just give us a call and we will help you complete your order.</p>
+        <p>And there is more! At Tata 1mg, you can buy health products and medicines online at best discounts.</p>
+        <p>Now, isn't that easy? Why go all the way to the medicine store and wait in line, when you have Tata 1mg Pharmacy at your service.</p>
+        <h3>The Feathers in Our Cap</h3>
+        <p>At Tata 1mg, our goal is to make healthcare understandable, accessible and affordable in India. We set out on our journey in 2015, and have come a long way since then. Along the way, we have been conferred with prestigious titles like BML Munjal Award for 'Business Excellence through Learning and Development', Best Online Pharmacy in India Award and Top 50 venture in The Smart CEO-Startup50 India. We have been selected as the only company from across the globe for SD#3 "Health & Well Being for all" by Unreasonable group, US State Department. In 2019 alone we received three awards including the BMW Simply Unstoppable Award.</p>
+        <h3>The Services We Offer</h3>
+        <p>Tata 1mg is India's leading digital healthcare platform, where you can buy medicines online with discount. Buy medicine online in Delhi, Mumbai, Bangalore, Hyderabad, Pune, Gurgaon, Noida, Kolkata, Chennai, Ahmedabad, Lucknow and around a 1000 more cities. Besides delivering your online medicine order at your doorstep, we provide accurate, authoritative & trustworthy information on medicines and help people use their medicines effectively and safely.</p>
+        <p>We also facilitate lab tests at home. You can avail over 2,000 tests and get tested by 120+ top and verified labs at the best prices. Need to consult a doctor? On our platform, you can talk to over 20 kinds of specialists in just a few clicks.</p>
+        <p>We’ve made healthcare accessible to millions by giving them quality care at affordable prices. Customer centricity is the core of our values. Our team of highly trained and experienced doctors, phlebotomists and pharmacists looks into each order to give you a fulfilling experience.</p>
+        <p>Visit our online medical store now, and avail online medicine purchase at a discount.</p>
+        <p>Stay Healthy!</p>
+    </div>
+
+    <footer>
+        <div id="footer1"><p>INDIA’S LARGEST HEALTHCARE PLATFORM</p><div id="footParant"><div><p><b>260M+</b></p><span>Visitors</span></div><div><p><b>31M+</b></p><span>Orders Delivers</span></div><div><p><b>1800M+</b></p><span>Cities</span></div></div></div><hr style="width: 90%; margin: auto;">
+        <div id="footer2">
+            <div><p>Get the link to download App</p></div><div><input type="number" placeholder="Enter Phone Number"></div><div><Button>Send Link</Button></div></div>
+        <div id="footer3">
+            <div>
+               <p style="font-size: 18px;"><b>Know Us</b></p>
+               <p><a href="https://www.google.com/">About Us</a></p>
+               <p><a href="https://www.google.com/">Contact Us</a></p>
+               <p><a href="https://www.google.com/">PressCoverage</a></p>
+               <p><a href="https://www.google.com/">Careers</a></p>
+               <p><a href="https://www.google.com/">Business Partnership</a></p>
+               <p><a href="https://www.google.com/">Become a Health Partner</a></p>
+               <p><a href="https://www.google.com/">Corprate Governance</a></p>
+            </div>
+            <div>
+                <p style="font-size: 18px;"><b>Our Policies</b></p>
+                <p><a href="https://www.google.com/">Privacy Policy</a></p>
+                <p><a href="https://www.google.com/">Terms and Condition</a></p>
+                <p><a href="https://www.google.com/">Editorial Policy</a></p>
+                <p><a href="https://www.google.com/">Return Policy</a></p>
+                <p><a href="https://www.google.com/">IP Policy</a></p>
+                <p><a href="https://www.google.com/">Grevince Redressal Policy</a></p>
+                <p><a href="https://www.google.com/">Fake Jobs and Fraud Disclaimer</a></p>
+            </div>
+            <div>
+                <p style="font-size: 18px;"><b>Our Services</b></p>
+                <p><a href="https://www.google.com/">Order Medician</a></p>
+                <p><a href="https://www.google.com/">Book Lab Test</a></p>
+                <p><a href="https://www.google.com/">Consult a Doctor</a></p>
+                <p><a href="https://www.google.com/">Ayurveda Article</a></p>
+                <p><a href="https://www.google.com/">Hindi Article</a></p>
+                <p><a href="https://www.google.com/">Care Plsn</a></p>
+            </div>
+            <div>
+                <p style="font-size: 18px; margin-bottom: 40px;"><b>Connect</b></p>
+                <p>Social Links</p>
+                <img src="http://clipartix.com/wp-content/uploads/2016/09/Facebook-logo-vector-free-download-clipart.jpeg" alt="err" width="30px" height="30px">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.Go2CQNhF_49tkKcpEl_sHQHaHZ&pid=Api&P=0" alt="err" width="30px" height="30px">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.vpx0C7O7lufiaNqp5toPAQHaHa&pid=Api&P=0" alt="err" width="30px" height="30px">
+                <img src="https://clipground.com/images/youtube-logo-square-clipart-2.png" alt="err" width="30px" height="30px">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.Pf90JumdA6WWszvFFKenCQHaHa&pid=Api&P=0" alt="err" width="30px" height="30px">
+                <p>Wants Daily Dose of Health?</p>
+                <button><b>Sign Up</b></button>
+            </div>
+            <div>
+                <p><b>Download App</b></p>
+                 <img src="https://tse1.mm.bing.net/th?id=OIP.tSnIZZCXZ8v4icg9SwbgHwHaFb&pid=Api&P=0" alt="err" width="130px" height="90px">
+            </div> 
+        </div>
+        <div id="footer4">
+            <div>
+                <img src="https://onemg.gumlet.io/secure-rebrand_x6f8yq.svg" alt="err" width="100px" height="100px">
+                <div>
+                    <h2>Reliable</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, sed! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, labore.</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://onemg.gumlet.io/reliable-rebrand_rcpof3.svg" alt="err" width="100px" height="100px">
+                <div>
+                    <h2>Secure</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, quae?</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://onemg.gumlet.io/affordable-rebrand_ivgidq.svg" alt="err" width="100px" height="100px">
+                <div>
+                    <h2>Affordable</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, sed! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, necessitatibus.</p>
+                </div>
+            </div>
+        </div>
+        <div id="footer5">
+            <div><img src="https://static.legitscript.com/seals/729605.png" alt="err" width="100px" height="100px">
+                <img src="https://onemg.gumlet.io/URS_ebgmxc.png" alt="" width="100px" height="100px"></div>
+                <h3>India's only LegitScript and ISO/ IEC 27001 certified online healthcare platform</h3>
+        </div>
+        <div id="footer6">
+            <h4>Know more about Tata 1mg</h4>
+        <h3>Access medical and health information</h3>
+        <p>Tata 1mg provides you with medical information which is curated, written and verified by experts, accurate and trustworthy. Our experts create high-quality content about medicines, diseases, lab investigations, Over-The-Counter (OTC) health products, Ayurvedic herbs/ingredients, and alternative remedies.</p>
+        <h3>Order medicines online</h3>
+        <p>Order medicines online
+            Get free medicine home delivery in over 1800 cities across India. You can also order Ayurvedic, Homeopathic and other Over-The-Counter (OTC) health products. Your safety is our top priority. All products displayed on Tata 1mg are procured from verified and licensed pharmacies.</p>
+        <h3>Book lab tests</h3>
+        <p>Book lab tests
+                Book any lab tests and preventive health packages from certified labs and get tested from the comfort of your home. Enjoy free home sample collection, view reports online and consult a doctor online for free.
+        </p>
+        <h3>Consult a doctor online</h3>
+        <p>Consult a doctor online
+                    Got a health query? Consult doctors online from the comfort of your home for free. Chat privately with our registered medical specialists to connect directly with verified doctors. Your privacy is guaranteed.
+        </p>
+        </div>
+
+    </footer>
 
 </body>
 </html>
