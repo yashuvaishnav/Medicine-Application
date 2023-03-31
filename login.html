@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in Page</title>
+    <style>
+          header{
+            background: white;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        header > #nevbar1{
+            display: flex;
+            justify-content: space-between;
+        }
+        header > #nevbar1 >.nevleft{
+            display: flex;
+            margin-left: 10px;
+        }
+        header > #nevbar1 >.nevleft > h2{
+            display: flex;
+            margin-left: 20px;
+        }
+        header > #nevbar1 >.nevleft > h3{
+            display: flex;
+            margin-left: 20px;
+            margin-top: 25px;
+        }
+        header > #nevbar1 > .nevright{
+            display: flex;
+            align-items: center;
+        }
+        header>#nevbar1>.nevright>a{
+            color: rgb(38, 38, 38);
+            text-decoration: none;
+        }
+        header>#nevbar1>.nevright>button{
+            margin-right: 30px;
+            margin-left: 50px;
+        }
+        #nevbar2{
+            display: flex;
+            justify-content: space-evenly;
+        }
+      .nav{
+        background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/HD-Laptop-Wallpaper.jpg");
+        background-repeat: no-repeat;
+        margin: 0px;
+        padding: 0px;
+        height: 100vh;
+        border: 2px solid #ffff;
+      }
+      #signin{
+        width: 35%;
+        margin: auto;
+        border: 2px solid white;
+        margin-top: 150px;
+        height: 55vh;
+        padding: 20px 0px 20px 35px;    
+      }
+      input {
+        width: 90%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        margin: 10px 0px 10px 0px ;
+        border-radius: 8px
+      }
+      .btn {
+        margin-top: 20px;
+        width: 92%;
+        padding: 10px;
+        border-radius: 20px;
+        font-weight: bold;
+        border: none;
+      }
+      #heading {
+        text-align: center;
+        font-family: cursive;
+      }
+      label {
+      color: black; 
+      font-family: 500;
+        font-size: 20px; 
+        font-family: cursive;
+      }
+      footer{
+            margin: 0;
+        }
+        footer>#footer1{
+            background: white; 
+        }
+        footer>#footer1>p{
+            text-align: center;
+            font-size: 25px;
+            padding-top: 20px;
+        }
+        footer>#footer1>#footParant{
+            display: flex;
+            justify-content: space-around;
+        }
+        footer>#footer1>#footParant>div>p{
+           font-size: 30px;
+        }
+        footer>#footer1>#footParant>div{
+           line-height: 1px;
+           text-align: center;
+           padding-bottom: 30px;
+        }
+        footer>#footer2{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-top: 0px;
+            background: white;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        footer>#footer2>div>p{
+            font-size: 21px;
+        }
+        footer>#footer2>div>button{
+            height: 40px;
+            width: 110px;
+            padding: 10px;
+            margin-left: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            background: rgb(255,91,79);
+            color: white;
+            border: none;
+        }
+        footer>#footer2>#num>input{
+            height: 23px;
+            margin-left: 10px;
+            margin-top:15px ;
+            width: 300px;
+            padding-left: 10px;
+            background: rgba(237, 237, 237, 0.945);
+            border: none;
+        }
+        footer > #footer3{
+            display: flex;
+            justify-content: space-around;
+            line-height: 10px;
+            padding: 40px;
+        }
+        footer > #footer3>div>p>a{
+            text-decoration: none;
+            color: gray;
+        }
+        footer > #footer3>div>button{
+            height: 35px;
+            width: 90px;
+            padding: 10px;
+            margin-left: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            background: rgb(255,91,79);
+            color: white;
+            border: none;
+        }
+        footer > #footer3 > div:nth-child(4){
+            line-height: 1px; 
+        }
+        footer>#footer4{
+            display: flex;
+            justify-content: space-evenly;
+            width: 80%;
+            margin: auto;
+        }
+        footer>#footer4>div{
+            display: flex;
+        }
+        footer>#footer4>div>img{
+            margin-top: 20px;
+        }
+        footer>#footer5>div{
+            display: flex;
+            justify-content: center;
+        }
+        footer>#footer5>div>img{
+            margin-left: 30px;
+            margin-top: 50px;
+        }
+        footer>#footer5>h3{
+            text-align: center;
+        }
+        footer>#footer6{
+            margin: 30px;
+        }
+        #nevbar3{
+            display: flex;
+            align-items: center;
+            
+        }
+        #nevbar3>input{
+            width: 200px;
+            height: 18px;
+            padding-left: 30px;
+            background: rgb(241, 240, 240);
+            border: none;
+            margin-left: 20px;  
+            border-radius: 0px;
+        }
+        #nevbar3>div>input{
+            width: 530px;
+            height: 18px;
+            background-color:  rgb(241, 240, 240);
+            border: none;
+            padding-left: 30px;
+            margin-left: 2px;   
+            border-radius: 0px;
+        }
+        #nevbar3>div>span{
+            width: 20px;
+            height: 24px;
+            background: rgb(241, 240, 240);
+            padding: 7px;
+        }
+        #a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #nevbar3>span{
+            margin-left: 160px;
+        }
+        #nevbar3>button{
+            padding: 5px;
+            width: 120px;
+            height: 35px;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            background: rgb(255,91,79);
+            margin-left: 5px;
+        }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div id="nevbar1"><div class="nevleft"><h2 style="font-family: 'Franklin Gothic Medium'; font-size: 25px;"><i>MEDI 1MG</i></h2><h3 style="color: orange;">MEDICIAN</h3><h3>LAB TESTS</h3><h3>CONSULT DOCTORS</h3><h3>COVID-19</h3><h3>AYURVEDA</h3><h3>CARE PLAN</h3></div> <div class="nevright"><a href="login.html">Login</a><p><pre> | </pre></p><a href="signup.html">Signup</a><pre style=" color: rgb(38, 38, 38); font-size: 15px;">  Offer</pre><button>CART</button><pre style="color: rgb(38, 38, 38);font-size: 15px; margin-right: 10px;">  Need Help?</pre></div></div><hr>
+      <div id="nevbar3"><input type="text" placeholder="New Delhi"><div id="a"><input type="text" placeholder="Search For Medician And Health Product" id="Search"><span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg></span></div><span>QUICK BUY! Get 15% off on medicines*</span><button>Quick Order</button></div>
+      <div id="nevbar2">
+      <p>Health Resource Center</p><p>Vitamins & Nutrition</p><p>Diabetes</p> <p>Health Devices</p> <p>Personal Care</p> <p>Health Condition</p>  <p>Ayurveda Products</p> <p>Homeopathy</p> <p>Featured</p> <p>Covid Essentials</p></div>
+    </header>
+
+    <div class="nav">
+      <div id="signin">
+        <h1 id="heading">Please Enter Your Details</h1>
+        <form>
+          <label for="">Enter your email</label> <br>
+          <input type="email" id="email" placeholder="Enter Your Email"/>
+          <label for="">Enter your password</label> <br>
+          <input type="password" id="password" placeholder="Enter Your Password"/>
+          <input class="btn" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    
+    <footer>
+      <div id="footer1"><p>INDIA’S LARGEST HEALTHCARE PLATFORM</p><div id="footParant"><div><p><b>260M+</b></p><span>Visitors</span></div><div><p><b>31M+</b></p><span>Orders Delivers</span></div><div><p><b>1800M+</b></p><span>Cities</span></div></div></div><hr style="width: 90%; margin: auto;">
+      <div id="footer2">
+          <div><p>Get the link to download App</p></div><div id="num"><input type="number" placeholder="Enter Phone Number"></div><div><Button>Send Link</Button></div></div>
+      <div id="footer3">
+          <div>
+             <p style="font-size: 18px;"><b>Know Us</b></p>
+             <p><a href="https://www.google.com/">About Us</a></p>
+             <p><a href="https://www.google.com/">Contact Us</a></p>
+             <p><a href="https://www.google.com/">PressCoverage</a></p>
+             <p><a href="https://www.google.com/">Careers</a></p>
+             <p><a href="https://www.google.com/">Business Partnership</a></p>
+             <p><a href="https://www.google.com/">Become a Health Partner</a></p>
+             <p><a href="https://www.google.com/">Corprate Governance</a></p>
+          </div>
+          <div>
+              <p style="font-size: 18px;"><b>Our Policies</b></p>
+              <p><a href="https://www.google.com/">Privacy Policy</a></p>
+              <p><a href="https://www.google.com/">Terms and Condition</a></p>
+              <p><a href="https://www.google.com/">Editorial Policy</a></p>
+              <p><a href="https://www.google.com/">Return Policy</a></p>
+              <p><a href="https://www.google.com/">IP Policy</a></p>
+              <p><a href="https://www.google.com/">Grevince Redressal Policy</a></p>
+              <p><a href="https://www.google.com/">Fake Jobs and Fraud Disclaimer</a></p>
+          </div>
+          <div>
+              <p style="font-size: 18px;"><b>Our Services</b></p>
+              <p><a href="https://www.google.com/">Order Medician</a></p>
+              <p><a href="https://www.google.com/">Book Lab Test</a></p>
+              <p><a href="https://www.google.com/">Consult a Doctor</a></p>
+              <p><a href="https://www.google.com/">Ayurveda Article</a></p>
+              <p><a href="https://www.google.com/">Hindi Article</a></p>
+              <p><a href="https://www.google.com/">Care Plsn</a></p>
+          </div>
+          <div>
+              <p style="font-size: 18px; margin-bottom: 40px;"><b>Connect</b></p>
+              <p>Social Links</p>
+              <img src="http://clipartix.com/wp-content/uploads/2016/09/Facebook-logo-vector-free-download-clipart.jpeg" alt="err" width="30px" height="30px">
+              <img src="https://tse3.mm.bing.net/th?id=OIP.Go2CQNhF_49tkKcpEl_sHQHaHZ&pid=Api&P=0" alt="err" width="30px" height="30px">
+              <img src="https://tse3.mm.bing.net/th?id=OIP.vpx0C7O7lufiaNqp5toPAQHaHa&pid=Api&P=0" alt="err" width="30px" height="30px">
+              <img src="https://clipground.com/images/youtube-logo-square-clipart-2.png" alt="err" width="30px" height="30px">
+              <img src="https://tse4.mm.bing.net/th?id=OIP.Pf90JumdA6WWszvFFKenCQHaHa&pid=Api&P=0" alt="err" width="30px" height="30px">
+              <p>Wants Daily Dose of Health?</p>
+              <button><b>Sign Up</b></button>
+          </div>
+          <div>
+              <p><b>Download App</b></p>
+               <img src="https://tse1.mm.bing.net/th?id=OIP.tSnIZZCXZ8v4icg9SwbgHwHaFb&pid=Api&P=0" alt="err" width="130px" height="90px">
+          </div> 
+      </div>
+      <div id="footer4">
+          <div>
+              <img src="https://onemg.gumlet.io/secure-rebrand_x6f8yq.svg" alt="err" width="100px" height="100px">
+              <div>
+                  <h2>Reliable</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, sed! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, labore.</p>
+              </div>
+          </div>
+          <div>
+              <img src="https://onemg.gumlet.io/reliable-rebrand_rcpof3.svg" alt="err" width="100px" height="100px">
+              <div>
+                  <h2>Secure</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, quae?</p>
+              </div>
+          </div>
+          <div>
+              <img src="https://onemg.gumlet.io/affordable-rebrand_ivgidq.svg" alt="err" width="100px" height="100px">
+              <div>
+                  <h2>Affordable</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, sed! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, necessitatibus.</p>
+              </div>
+          </div>
+      </div>
+      <div id="footer5">
+          <div><img src="https://static.legitscript.com/seals/729605.png" alt="err" width="100px" height="100px">
+              <img src="https://onemg.gumlet.io/URS_ebgmxc.png" alt="" width="100px" height="100px"></div>
+              <h3>India's only LegitScript and ISO/ IEC 27001 certified online healthcare platform</h3>
+      </div>
+      <div id="footer6">
+          <h4>Know more about Tata 1mg</h4>
+      <h3>Access medical and health information</h3>
+      <p>Tata 1mg provides you with medical information which is curated, written and verified by experts, accurate and trustworthy. Our experts create high-quality content about medicines, diseases, lab investigations, Over-The-Counter (OTC) health products, Ayurvedic herbs/ingredients, and alternative remedies.</p>
+      <h3>Order medicines online</h3>
+      <p>Order medicines online
+          Get free medicine home delivery in over 1800 cities across India. You can also order Ayurvedic, Homeopathic and other Over-The-Counter (OTC) health products. Your safety is our top priority. All products displayed on Tata 1mg are procured from verified and licensed pharmacies.</p>
+      <h3>Book lab tests</h3>
+      <p>Book lab tests
+              Book any lab tests and preventive health packages from certified labs and get tested from the comfort of your home. Enjoy free home sample collection, view reports online and consult a doctor online for free.
+      </p>
+      <h3>Consult a doctor online</h3>
+      <p>Consult a doctor online
+                  Got a health query? Consult doctors online from the comfort of your home for free. Chat privately with our registered medical specialists to connect directly with verified doctors. Your privacy is guaranteed.
+      </p>
+      </div>
+  </footer>
+    
+
+  </body>
+  <script>
+
+
+  
+    document.querySelector("form").addEventListener("submit",userLogin)
+    let userData = JSON.parse(localStorage.getItem("account-data"))|| []
+    function userLogin(e){
+      e.preventDefault()
+    let heading = document.getElementById("heading")
+     let  email = document.getElementById("email").value
+     let  password = document.getElementById("password").value
+
+      let data = userData.find(user => user.email === email && user.password === password)
+        
+      if(data){
+        alert ("Sign in Successful")
+        window.location.href="index.html"
+      } else {
+        alert ("Wrong Credentials")
+      }
+
+      // if(userData.email === email  && userData.password === password){
+      //  heading.innerText = "Sign in Successful"
+      // } else {
+      //   heading.innerText = "Wrong Credentials"
+      // }
+   
+ }
+
+  </script>
+</html>
