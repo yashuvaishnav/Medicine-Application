@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in Page</title>
     <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
           header{
             background: white;
             box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -27,6 +31,25 @@
             margin-left: 20px;
             margin-top: 25px;
         }
+        .nevleft>h3:hover{
+            color: rgb(255,91,79);
+            cursor: pointer;
+        }
+        .nevleft>a:hover{
+            color: rgb(255,91,79);
+        }
+        .cartBtn {
+            border: none;
+            padding: 8px 20px;
+            font-weight: bold;
+            font-size: 10px;
+            background-color: rgb(255,91,79);
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: 13px;
+        }
         header > #nevbar1 > .nevright{
             display: flex;
             align-items: center;
@@ -40,52 +63,103 @@
             margin-left: 50px;
         }
         #nevbar2{
-            display: flex;
-            justify-content: space-evenly;
+           display: flex;
+           justify-content: space-around;
+           margin: 15px 0px;
         }
-      .nav{
+        .menu{
+            position: absolute;
+            top: 25px;
+            display: none;
+            line-height:10px;
+            padding: 0px 10px 10px 10px ;
+            /* border: 2px solid red; */
+            background: white;
+            width: 200px;
+            font-size:14px ;
+        }
+        .check{
+           position: relative;
+           left: 20px;
+        }
+        .check:hover .menu{
+            display: block; 
+        }
+        .check:hover{
+            cursor:pointer;
+            /* color: orange;    */
+        }
+        .check > div:hover{
+            color: orange;
+        }
+        .menu1{
+           position: absolute;
+           top: 25px;
+           display: none;
+           line-height:10px;
+           padding: 0px 10px 10px 10px ;
+          /* border: 2px solid red; */
+           background: white;
+           width: 200px;
+           font-size:14px ;
+           margin-left: -100px;
+        }
+        .check1{
+            position: relative;
+        }
+        .check1:hover .menu1{
+            display: block; 
+            margin-right: 200px;
+        }
+        .check1:hover{
+            cursor:pointer;   
+        }
+        .check1>div:hover{
+            color: orange;
+        }
+       .nav{
         background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/HD-Laptop-Wallpaper.jpg");
         background-repeat: no-repeat;
         margin: 0px;
         padding: 0px;
         height: 100vh;
         border: 2px solid #ffff;
-      }
-      #signin{
+        }
+        #signin{
         width: 35%;
         margin: auto;
         border: 2px solid white;
         margin-top: 150px;
         height: 55vh;
         padding: 20px 0px 20px 35px;    
-      }
-      input {
+        }
+        input {
         width: 90%;
         padding: 10px;
         border: none;
         outline: none;
         margin: 10px 0px 10px 0px ;
         border-radius: 8px
-      }
-      .btn {
+        }
+        .btn {
         margin-top: 20px;
         width: 92%;
         padding: 10px;
         border-radius: 20px;
         font-weight: bold;
         border: none;
-      }
-      #heading {
+        }
+        #heading {
         text-align: center;
         font-family: cursive;
-      }
-      label {
+        }
+        label {
       color: black; 
       font-family: 500;
         font-size: 20px; 
         font-family: cursive;
-      }
-      footer{
+        }
+        footer{
             margin: 0;
         }
         footer>#footer1{
@@ -243,12 +317,23 @@
   <body>
 
     <header>
-      <div id="nevbar1"><div class="nevleft"><h2 style="font-family: 'Franklin Gothic Medium'; font-size: 25px;"><i>MEDI 1MG</i></h2><h3 style="color: orange;">MEDICIAN</h3><h3>LAB TESTS</h3><h3>CONSULT DOCTORS</h3><h3>COVID-19</h3><h3>AYURVEDA</h3><h3>CARE PLAN</h3></div> <div class="nevright"><a href="login.html">Login</a><p><pre> | </pre></p><a href="signup.html">Signup</a><pre style=" color: rgb(38, 38, 38); font-size: 15px;">  Offer</pre><button>CART</button><pre style="color: rgb(38, 38, 38);font-size: 15px; margin-right: 10px;">  Need Help?</pre></div></div><hr>
+      <div id="nevbar1"><div class="nevleft"><a href="index.html"><h2><i style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(38, 38, 38);">MEDI 1MG</i></h2></a><h3 style="color: rgb(255,91,79);">MEDICIAN</h3><h3>LAB TESTS</h3><h3>CONSULT DOCTORS</h3><h3>COVID-19</h3><h3>AYURVEDA</h3><h3>CARE PLAN</h3></div> <div class="nevright"><a href="login.html">Login</a><p><pre> | </pre></p><a href="signup.html">Signup</a><pre style=" color: rgb(38, 38, 38); font-size: 15px;">  Offer</pre><a href="cart.html"><button class="cartBtn">CART</button></a><pre style="color: rgb(38, 38, 38);font-size: 15px; margin-right: 10px;">  Need Help?</pre></div></div>
       <div id="nevbar3"><input type="text" placeholder="New Delhi"><div id="a"><input type="text" placeholder="Search For Medician And Health Product" id="Search"><span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
       </svg></span></div><span>QUICK BUY! Get 15% off on medicines*</span><button>Quick Order</button></div>
       <div id="nevbar2">
-      <p>Health Resource Center</p><p>Vitamins & Nutrition</p><p>Diabetes</p> <p>Health Devices</p> <p>Personal Care</p> <p>Health Condition</p>  <p>Ayurveda Products</p> <p>Homeopathy</p> <p>Featured</p> <p>Covid Essentials</p></div>
+        <div class="check"><div>Health Resource Center</div><div class="menu"><h4>All Diseases </h4><h4>All Medician</h4><h4>Medicines by Therepeutic Class</h4></div></div>
+        <div class="check"><div>Vitamins & Nutrition</div><div class="menu"><h4>Vitamins & Supplements</h4><p>Multivitamins</p><p>Vitamins A-Z</p><p>Minenal Supplements</p><p>Vitamins B12 & B Complex</p><h4>Nutrition Drinks</h4><p>Adult Daily Nutrition</p><p>Kids Nutrition (2-15 Yrs)</p><p>Women Nutrition</p><h4>Healthy Snacks & Drinks</h4><p>Green Tea & Herbal Tea</p><p>Apple Cider Vinegar</p><p>Enery Foods</p></div></div>
+        <div class="check"><div>Diabetes</div><div class="menu"><h4>Diabetes</h4><p>Blood Glucos Moniters</p><p>Test Strips & Lancets</p><p>Syringes & Pens</p><p>Continuous Glucose monitors</p><h4>Sugar free</h4></div></div>
+        <div class="check"><div>Healthcare Devices</div><div class="menu"><h4>Top brands in Healthcare</h4><p>Dr. Morepen Devices</p><p>Accu-chek</p><p>One-touch</p><p>Omron</p><p>Contour</p><p>Dr. Trust</p><h4>BP Moniters</h4><h4>Oxygen Concentrators & Cans</h4><h4>Thermometers</h4><p>IR Thermometers</p><h4>Weighing Scales</h4></div></div>
+        <div class="check"><div>Personal Care</div><div class="menu"><h4>Sexual Wellness</h4><p>condoms</p><p>Lubricants & Massage Gels</p><p>Personal body massagers</p><p>Men Perfomance Enhancers</p><p>Sexual Health Supplements</p><h4>Skin Care</h4><p>Body Lotions</p><p>Mosquito Repelients</p><p>Lip Balm</p><p>Acne Care</p><p>Bath Essentials</p><p>Facewash</p><p>Sanitizers & Handwash</p><p>Sunscreen</p></div></div>
+        <div class="check"><div>Health Conditions</div><div class="menu"><h4>Stomach Care</h4><p>Constipation</p><p>General Digestion</p><p>Loose motion</p><h4>Heart Care</h4><h4>Bone, Joint & Muscie Care</h4><h4>Pain Relief</h4><p>Omnigel products</p><p>Volini</p><p>Moov</p><p>Iodex</p><h4>Eye Care</h4><p>Eye Lubricants</p><h3>Ear Care</h3>Hearing And Devices</div></div>
+        <div class="check"><div>Ayurveda Products</div><div class="menu"><h4>Ayurveda Top Brands</h4><p>Dabor</p><p>Sri Sri Tattva</p><p>Kerala Ayurveda</p><p>Jiva Ayurveda</p><p>Patanjali</p><h4>Chyawanparash</h4><h4>Popular categories</h4><p>Herbal juice</p><p>Ayurvedic Immunity Boosters</p><p>Explore Popular Herbs</p><p>Herbal Supplements</p></div></div>
+        <div class="check"><div>Homeopathy</div><div class="menu"><h4>Homeopathy Top Brands</h4><p>SBL Homeopathy</p><p>Dr Reckeweg</p><p>Dr Willmar Schwabe India</p><p>Adel Pekana</p><p>BJAIN Homeopathy</p><p>Baksons's</p><p>Allen</p><p>Whexal</p><p>Hasblab</p><p>Medisynth</p><p>Boliron</p><p>Bhandari</p><p>Dr Batra's</p></div></div>
+        <div class="check"><div>Featured</div><div class="menu"><h4>Top Brands</h4><p>Accu-Chek</p><p>Ensure</p><p>Revital</p><p>Dr. Morepen</p><p>Pediasure</p><p>Teddy</p><p>Scalpe</p></div></div>
+        <div class="check1">Covid Essentials<div class="menu1"><h4>Covid-19 Self test kits</h4><h4>Oxygen Cans & Concentrators</h4><h4>Masks</h4><h4>Sanitizers & Handwash Products</h4><h4>Support Your Immunity</h4><h4>Thermometers</h4><h4>Chyawanparash</h4></div></div>
+   
+       </div>
     </header>
 
     <div class="nav">
@@ -356,13 +441,9 @@
       </p>
       </div>
   </footer>
-    
 
   </body>
   <script>
-
-
-  
     document.querySelector("form").addEventListener("submit",userLogin)
     let userData = JSON.parse(localStorage.getItem("account-data"))|| []
     function userLogin(e){
@@ -379,14 +460,6 @@
       } else {
         alert ("Wrong Credentials")
       }
-
-      // if(userData.email === email  && userData.password === password){
-      //  heading.innerText = "Sign in Successful"
-      // } else {
-      //   heading.innerText = "Wrong Credentials"
-      // }
-   
  }
-
   </script>
 </html>
