@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+<style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+            #cartContainer {
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            gap: 10px;
+            margin: 20px 0px 20px 0px ;
+            background-color: #ffff;
+            /* width: 90%; */
+            /* margin: auto; */
+        }
+        #cartContainer div img {
+            width: 50%;
+        }
+        #cartContainer  :hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        /* #proContainer div :hover {
+            transform: 100ms ;
+        } */
+
+        #cartContainer div {
+            padding: 15px 10px 10px 10px  ;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        }
+        #cartContainer div button {
+            width: 100%;
+            padding: 6px;
+            border: none;
+            font-weight: bold;
+            background-color: red;
+            color: #ffff;
+            cursor: pointer;
+        }
+        #cartContainer div button:hover {
+            background-color: green;
+        }
+        header{
+            background: white;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        header > #nevbar1{
+            display: flex;
+            justify-content: space-between;
+        }
+        header > #nevbar1 >.nevleft{
+            display: flex;
+            margin-left: 10px;
+        }
+        header > #nevbar1 >.nevleft > h2{
+            display: flex;
+            margin-left: 20px;
+        }
+        header > #nevbar1 >.nevleft > h3{
+            display: flex;
+            margin-left: 20px;
+            margin-top: 25px;
+        }
+        .nevleft>h3:hover{
+            color: rgb(255,91,79);
+            cursor: pointer;
+        }
+        .nevleft>a:hover{
+            color: rgb(255,91,79);
+        }
+        .cartBtn {
+            border: none;
+            padding: 8px 20px;
+            font-weight: bold;
+            font-size: 10px;
+            background-color: rgb(255,91,79);
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: 13px;
+        }
+        header > #nevbar1 > .nevright{
+            display: flex;
+            align-items: center;
+        }
+        header>#nevbar1>.nevright>a{
+            color: rgb(38, 38, 38);
+            text-decoration: none;
+        }
+        header>#nevbar1>.nevright>button{
+            margin-right: 30px;
+            margin-left: 50px;
+        }
+        #nevbar3{
+            display: flex;
+            align-items: center;    
+        }
+        #nevbar3>input{
+            width: 200px;
+            height: 37px;
+            padding-left: 30px;
+            background: rgb(241, 240, 240);
+            border: none;
+            margin-left: 20px;  
+            border-radius: 0px;
+        }
+        #nevbar3>div>input{
+            width: 530px;
+            height: 37px;
+            background-color:  rgb(241, 240, 240);
+            border: none;
+            padding-left: 30px;
+            margin-left: 2px;   
+            border-radius: 0px;
+        }
+        #nevbar3>div>span{
+            width: 20px;
+            height: 24px;
+            background: rgb(241, 240, 240);
+            padding: 7px;
+        }
+        #a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #nevbar3>span{
+            margin-left: 160px;
+            color: rgb(38, 38, 38);
+        }
+        #nevbar3>button{
+            padding: 5px;
+            width: 150px;
+            height: 35px;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            background: rgb(255,91,79);
+            margin-left: 5px;
+        }
+        #nevbar2{
+           display: flex;
+           justify-content: space-around;
+           margin: 15px 0px;
+        }
+        .menu{
+            position: absolute;
+            top: 25px;
+            display: none;
+            line-height:10px;
+            padding: 0px 10px 10px 10px ;
+            /* border: 2px solid red; */
+            background: white;
+            width: 200px;
+            font-size:14px ;
+        }
+        .check{
+           position: relative;
+           left: 20px;
+        }
+        .check:hover .menu{
+            display: block; 
+        }
+        .check:hover{
+            cursor:pointer;
+            /* color: orange;    */
+        }
+        .check > div:hover{
+            color: orange;
+        }
+        .menu1{
+           position: absolute;
+           top: 25px;
+           display: none;
+           line-height:10px;
+           padding: 0px 10px 10px 10px ;
+          /* border: 2px solid red; */
+           background: white;
+           width: 200px;
+           font-size:14px ;
+           margin-left: -100px;
+        }
+        .check1{
+            position: relative;
+        }
+        .check1:hover .menu1{
+            display: block; 
+            margin-right: 200px;
+        }
+        .check1:hover{
+            cursor:pointer;   
+        }
+        .check1>div:hover{
+            color: orange;
+        }
+        footer{
+            margin: 0;
+        }
+        footer>#footer1{
+            background: white; 
+        }
+        footer>#footer1>p{
+            text-align: center;
+            font-size: 25px;
+            padding-top: 20px;
+        }
+        footer>#footer1>#footParant{
+            display: flex;
+            justify-content: space-around;
+        }
+        footer>#footer1>#footParant>div>p{
+           font-size: 30px;
+        }
+        footer>#footer1>#footParant>div{
+           line-height: 1px;
+           text-align: center;
+           padding-bottom: 30px;
+        }
+        footer>#footer2{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-top: 0px;
+            background: white;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        footer>#footer2>div>p{
+            font-size: 21px;
+        }
+        footer>#footer2>div>button{
+            height: 40px;
+            width: 110px;
+            padding: 10px;
+            margin-left: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            background: rgb(255,91,79);
+            color: white;
+            border: none;
+        }
+        footer>#footer2>div>input{
+            height: 40px;
+            margin-left: 10px;
+            margin-top:15px ;
+            width: 300px;
+            padding-left: 10px;
+            background: rgba(237, 237, 237, 0.945);
+            border: none;
+        }
+        footer > #footer3{
+            display: flex;
+            justify-content: space-around;
+            line-height: 10px;
+            padding: 40px;
+        }
+        footer > #footer3>div>p>a{
+            text-decoration: none;
+            color: gray;
+        }
+        footer > #footer3>div>button{
+            height: 35px;
+            width: 90px;
+            padding: 10px;
+            margin-left: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+            background: rgb(255,91,79);
+            color: white;
+            border: none;
+        }
+        footer > #footer3 > div:nth-child(4){
+            line-height: 1px; 
+        }
+        footer>#footer4{
+            display: flex;
+            justify-content: space-evenly;
+            width: 80%;
+            margin: auto;
+        }
+        footer>#footer4>div{
+            display: flex;
+        }
+        footer>#footer4>div>img{
+            margin-top: 20px;
+        }  
+        footer>#footer5>div{
+            display: flex;
+            justify-content: center;
+        }
+        footer>#footer5>div>img{
+            margin-left: 30px;
+            margin-top: 50px;
+        }
+        footer>#footer5>h3{
+            text-align: center;
+        }
+        footer>#footer6{
+            margin: 30px;
+        }
+        .heading{
+            text-align: center;
+            color: rgb(255,91,79);
+            /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: cursive;
+        }
+        #totalLength{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: cursive;
+        }
+
+       
+
+</style>
+<body>
+    <header>
+        <div id="nevbar1"><div class="nevleft"><a href="index.html"><h2><i style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: black;">MEDI 1MG</i></h2></a><h3 style="color: rgb(255,91,79);">MEDICIAN</h3><h3>LAB TESTS</h3><h3>CONSULT DOCTORS</h3><h3>COVID-19</h3><h3>AYURVEDA</h3><h3>CARE PLAN</h3></div> <div class="nevright"><a href="login.html">Login</a><p><pre> | </pre></p><a href="signup.html">Signup</a><pre style=" color: rgb(38, 38, 38); font-size: 15px;">  Offer</pre><a href="cart.html"><button class="cartBtn">CART</button></a><pre style="color: rgb(38, 38, 38);font-size: 15px; margin-right: 10px;">  Need Help?</pre></div></div>
+
+        <div id="nevbar3"><input type="text" placeholder="New Delhi"><div id="a"><input type="text" placeholder="Search For Medician And Health Product" id="Search"><span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg></span></div><span>QUICK BUY! Get 15% off on medicines*</span><button>Quick Order</button></div>
+          <div id="nevbar2">
+            <div class="check"><div>Health Resource Center</div><div class="menu"><h4>All Diseases </h4><h4>All Medician</h4><h4>Medicines by Therepeutic Class</h4></div></div>
+            <div class="check"><div>Vitamins & Nutrition</div><div class="menu"><h4>Vitamins & Supplements</h4><p>Multivitamins</p><p>Vitamins A-Z</p><p>Minenal Supplements</p><p>Vitamins B12 & B Complex</p><h4>Nutrition Drinks</h4><p>Adult Daily Nutrition</p><p>Kids Nutrition (2-15 Yrs)</p><p>Women Nutrition</p><h4>Healthy Snacks & Drinks</h4><p>Green Tea & Herbal Tea</p><p>Apple Cider Vinegar</p><p>Enery Foods</p></div></div>
+            <div class="check"><div>Diabetes</div><div class="menu"><h4>Diabetes</h4><p>Blood Glucos Moniters</p><p>Test Strips & Lancets</p><p>Syringes & Pens</p><p>Continuous Glucose monitors</p><h4>Sugar free</h4></div></div>
+            <div class="check"><div>Healthcare Devices</div><div class="menu"><h4>Top brands in Healthcare</h4><p>Dr. Morepen Devices</p><p>Accu-chek</p><p>One-touch</p><p>Omron</p><p>Contour</p><p>Dr. Trust</p><h4>BP Moniters</h4><h4>Oxygen Concentrators & Cans</h4><h4>Thermometers</h4><p>IR Thermometers</p><h4>Weighing Scales</h4></div></div>
+            <div class="check"><div>Personal Care</div><div class="menu"><h4>Sexual Wellness</h4><p>condoms</p><p>Lubricants & Massage Gels</p><p>Personal body massagers</p><p>Men Perfomance Enhancers</p><p>Sexual Health Supplements</p><h4>Skin Care</h4><p>Body Lotions</p><p>Mosquito Repelients</p><p>Lip Balm</p><p>Acne Care</p><p>Bath Essentials</p><p>Facewash</p><p>Sanitizers & Handwash</p><p>Sunscreen</p></div></div>
+            <div class="check"><div>Health Conditions</div><div class="menu"><h4>Stomach Care</h4><p>Constipation</p><p>General Digestion</p><p>Loose motion</p><h4>Heart Care</h4><h4>Bone, Joint & Muscie Care</h4><h4>Pain Relief</h4><p>Omnigel products</p><p>Volini</p><p>Moov</p><p>Iodex</p><h4>Eye Care</h4><p>Eye Lubricants</p><h3>Ear Care</h3>Hearing And Devices</div></div>
+            <div class="check"><div>Ayurveda Products</div><div class="menu"><h4>Ayurveda Top Brands</h4><p>Dabor</p><p>Sri Sri Tattva</p><p>Kerala Ayurveda</p><p>Jiva Ayurveda</p><p>Patanjali</p><h4>Chyawanparash</h4><h4>Popular categories</h4><p>Herbal juice</p><p>Ayurvedic Immunity Boosters</p><p>Explore Popular Herbs</p><p>Herbal Supplements</p></div></div>
+            <div class="check"><div>Homeopathy</div><div class="menu"><h4>Homeopathy Top Brands</h4><p>SBL Homeopathy</p><p>Dr Reckeweg</p><p>Dr Willmar Schwabe India</p><p>Adel Pekana</p><p>BJAIN Homeopathy</p><p>Baksons's</p><p>Allen</p><p>Whexal</p><p>Hasblab</p><p>Medisynth</p><p>Boliron</p><p>Bhandari</p><p>Dr Batra's</p></div></div>
+            <div class="check"><div>Featured</div><div class="menu"><h4>Top Brands</h4><p>Accu-Chek</p><p>Ensure</p><p>Revital</p><p>Dr. Morepen</p><p>Pediasure</p><p>Teddy</p><p>Scalpe</p></div></div>
+            <div class="check1">Covid Essentials<div class="menu1"><h4>Covid-19 Self test kits</h4><h4>Oxygen Cans & Concentrators</h4><h4>Masks</h4><h4>Sanitizers & Handwash Products</h4><h4>Support Your Immunity</h4><h4>Thermometers</h4><h4>Chyawanparash</h4></div></div>
+
+           </div>
+    </header>
+
+    <div class="heading"><h1>Shoping Cart</h1> <span id="totalLength"></span></div>
+    <div id="cartContainer"></div>
+
+    <footer>
+        <div id="footer1"><p>INDIA’S LARGEST HEALTHCARE PLATFORM</p><div id="footParant"><div><p><b>260M+</b></p><span>Visitors</span></div><div><p><b>31M+</b></p><span>Orders Delivers</span></div><div><p><b>1800M+</b></p><span>Cities</span></div></div></div><hr style="width: 90%; margin: auto;">
+        <div id="footer2">
+            <div><p>Get the link to download App</p></div><div><input type="number" placeholder="Enter Phone Number"></div><div><Button>Send Link</Button></div></div>
+        <div id="footer3">
+            <div>
+               <p style="font-size: 18px;"><b>Know Us</b></p>
+               <p><a href="https://www.google.com/">About Us</a></p>
+               <p><a href="https://www.google.com/">Contact Us</a></p>
+               <p><a href="https://www.google.com/">PressCoverage</a></p>
+               <p><a href="https://www.google.com/">Careers</a></p>
+               <p><a href="https://www.google.com/">Business Partnership</a></p>
+               <p><a href="https://www.google.com/">Become a Health Partner</a></p>
+               <p><a href="https://www.google.com/">Corprate Governance</a></p>
+            </div>
+            <div>
+                <p style="font-size: 18px;"><b>Our Policies</b></p>
+                <p><a href="https://www.google.com/">Privacy Policy</a></p>
+                <p><a href="https://www.google.com/">Terms and Condition</a></p>
+                <p><a href="https://www.google.com/">Editorial Policy</a></p>
+                <p><a href="https://www.google.com/">Return Policy</a></p>
+                <p><a href="https://www.google.com/">IP Policy</a></p>
+                <p><a href="https://www.google.com/">Grevince Redressal Policy</a></p>
+                <p><a href="https://www.google.com/">Fake Jobs and Fraud Disclaimer</a></p>
+            </div>
+            <div>
+                <p style="font-size: 18px;"><b>Our Services</b></p>
+                <p><a href="https://www.google.com/">Order Medician</a></p>
+                <p><a href="https://www.google.com/">Book Lab Test</a></p>
+                <p><a href="https://www.google.com/">Consult a Doctor</a></p>
+                <p><a href="https://www.google.com/">Ayurveda Article</a></p>
+                <p><a href="https://www.google.com/">Hindi Article</a></p>
+                <p><a href="https://www.google.com/">Care Plsn</a></p>
+            </div>
+            <div>
+                <p style="font-size: 18px; margin-bottom: 40px;"><b>Connect</b></p>
+                <p>Social Links</p>
+                <img src="http://clipartix.com/wp-content/uploads/2016/09/Facebook-logo-vector-free-download-clipart.jpeg" alt="err" width="30px" height="30px">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.Go2CQNhF_49tkKcpEl_sHQHaHZ&pid=Api&P=0" alt="err" width="30px" height="30px">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.vpx0C7O7lufiaNqp5toPAQHaHa&pid=Api&P=0" alt="err" width="30px" height="30px">
+                <img src="https://clipground.com/images/youtube-logo-square-clipart-2.png" alt="err" width="30px" height="30px">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.Pf90JumdA6WWszvFFKenCQHaHa&pid=Api&P=0" alt="err" width="30px" height="30px">
+                <p>Wants Daily Dose of Health?</p>
+                <button><b>Sign Up</b></button>
+            </div>
+            <div>
+                <p><b>Download App</b></p>
+                 <img src="https://tse1.mm.bing.net/th?id=OIP.tSnIZZCXZ8v4icg9SwbgHwHaFb&pid=Api&P=0" alt="err" width="130px" height="90px">
+            </div> 
+        </div>
+        <div id="footer4">
+            <div>
+                <img src="https://onemg.gumlet.io/secure-rebrand_x6f8yq.svg" alt="err" width="100px" height="100px">
+                <div>
+                    <h2>Reliable</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, sed! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, labore.</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://onemg.gumlet.io/reliable-rebrand_rcpof3.svg" alt="err" width="100px" height="100px">
+                <div>
+                    <h2>Secure</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, quae?</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://onemg.gumlet.io/affordable-rebrand_ivgidq.svg" alt="err" width="100px" height="100px">
+                <div>
+                    <h2>Affordable</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, sed! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, necessitatibus.</p>
+                </div>
+            </div>
+        </div>
+        <div id="footer5">
+            <div><img src="https://static.legitscript.com/seals/729605.png" alt="err" width="100px" height="100px">
+                <img src="https://onemg.gumlet.io/URS_ebgmxc.png" alt="" width="100px" height="100px"></div>
+                <h3>India's only LegitScript and ISO/ IEC 27001 certified online healthcare platform</h3>
+        </div>
+        <div id="footer6">
+            <h4>Know more about Tata 1mg</h4>
+        <h3>Access medical and health information</h3>
+        <p>Tata 1mg provides you with medical information which is curated, written and verified by experts, accurate and trustworthy. Our experts create high-quality content about medicines, diseases, lab investigations, Over-The-Counter (OTC) health products, Ayurvedic herbs/ingredients, and alternative remedies.</p>
+        <h3>Order medicines online</h3>
+        <p>Order medicines online
+            Get free medicine home delivery in over 1800 cities across India. You can also order Ayurvedic, Homeopathic and other Over-The-Counter (OTC) health products. Your safety is our top priority. All products displayed on Tata 1mg are procured from verified and licensed pharmacies.</p>
+        <h3>Book lab tests</h3>
+        <p>Book lab tests
+                Book any lab tests and preventive health packages from certified labs and get tested from the comfort of your home. Enjoy free home sample collection, view reports online and consult a doctor online for free.
+        </p>
+        <h3>Consult a doctor online</h3>
+        <p>Consult a doctor online
+                    Got a health query? Consult doctors online from the comfort of your home for free. Chat privately with our registered medical specialists to connect directly with verified doctors. Your privacy is guaranteed.
+        </p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
+<script>
+ 
+ let data = JSON.parse(localStorage.getItem("cartData"))
+
+ displayCartData()
+  function displayCartData() {
+    document.querySelector("#cartContainer").innerHTML=""
+    data.forEach((elem,ind )=> {
+        console.log(elem)
+        let div = document.createElement("div")
+       let images = document.createElement("img")
+       images.src = elem.url
+        
+       let title = document.createElement("h3")
+       title.innerText = elem.title
+
+       let description = document.createElement("p")
+       description.innerText = elem. description
+       let discount = document.createElement("p")
+       discount.innerText = elem.discount
+     
+       let price = document.createElement("p")
+       discount.innerText = `₹${elem.price}`
+       
+       let btn = document.createElement("button")
+        btn.innerText = "Remove"
+        
+       btn.addEventListener("click", function () {
+        remove(elem,ind)
+       })
+       div.append(images,title,description,discount,price,btn)
+       document.querySelector("#cartContainer").append(div)
+    })
+}
+  function remove(elem,ind) {
+    alert("Products deleted successfully")
+       data.splice(ind,1)
+     localStorage.setItem("cartData", JSON.stringify(data)) 
+     window.location.reload()
+  }
+
+
+  document.getElementById("totalLength").innerText=`Your total item is :-${data.length}`
+</script>

@@ -22,39 +22,6 @@
         padding: 20px 0px 20px 35px;
         
       }
-      /* #signup>form>#name{
-        display: block;
-        line-height: 10px;
-        width: 300px;
-        height: 30px;
-        margin-top: 10px;
-        border-radius: 10px;
-        border: none;
-        background: rgb(235, 235, 235);
-        padding: 5px 5px 5px 10px;
-      }
-      #signup>form>#email{
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        width: 300px;
-        height: 30px;
-        border-radius: 10px;
-        border: none;
-        background: rgb(235, 235, 235);
-        padding: 5px 5px 5px 10px;
-      }
-      #signup>form>#password{
-        display: block;
-        width: 300px;
-        height: 30px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border-radius: 10px;
-        border: none;
-        background: rgb(235, 235, 235);
-        padding: 5px 5px 5px 10px;
-      } */
       .nav{
         background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/HD-Laptop-Wallpaper.jpg");
         background-repeat: no-repeat;
@@ -109,6 +76,25 @@
             display: flex;
             margin-left: 20px;
             margin-top: 25px;
+        }
+        .nevleft>h3:hover{
+            color: rgb(255,91,79);
+            cursor: pointer;
+        }
+        .nevleft>a:hover{
+            color: rgb(255,91,79);
+        }
+        .cartBtn {
+            border: none;
+            padding: 8px 20px;
+            font-weight: bold;
+            font-size: 10px;
+            background-color: rgb(255,91,79);
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: 13px;
         }
         header > #nevbar1 > .nevright{
             display: flex;
@@ -284,7 +270,7 @@
 <body>
 
   <header>
-    <div id="nevbar1"><div class="nevleft"><h2 style="font-family: 'Franklin Gothic Medium'; font-size: 25px;"><i>MEDI 1MG</i></h2><h3 style="color: orange;">MEDICIAN</h3><h3>LAB TESTS</h3><h3>CONSULT DOCTORS</h3><h3>COVID-19</h3><h3>AYURVEDA</h3><h3>CARE PLAN</h3></div> <div class="nevright"><a href="login.html">Login</a><p><pre> | </pre></p><a href="signup.html">Signup</a><pre style=" color: rgb(38, 38, 38); font-size: 15px;">  Offer</pre><button>CART</button><pre style="color: rgb(38, 38, 38);font-size: 15px; margin-right: 10px;">  Need Help?</pre></div></div><hr>
+    <div id="nevbar1"><div class="nevleft"><a href="index.html"><h2><i style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(38, 38, 38);">MEDI 1MG</i></h2></a><h3 style="color: rgb(255,91,79);">MEDICIAN</h3><h3>LAB TESTS</h3><h3>CONSULT DOCTORS</h3><h3>COVID-19</h3><h3>AYURVEDA</h3><h3>CARE PLAN</h3></div> <div class="nevright"><a href="login.html">Login</a><p><pre> | </pre></p><a href="signup.html">Signup</a><pre style=" color: rgb(38, 38, 38); font-size: 15px;">  Offer</pre><a href="cart.html"><button class="cartBtn">CART</button></a><pre style="color: rgb(38, 38, 38);font-size: 15px; margin-right: 10px;">  Need Help?</pre></div></div>
     <div id="nevbar3"><input type="text" placeholder="New Delhi"><div id="a"><input type="text" placeholder="Search For Medician And Health Product" id="Search"><span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
     </svg></span></div><span>QUICK BUY! Get 15% off on medicines*</span><button>Quick Order</button></div>
@@ -304,9 +290,8 @@
         <input type="password"  id="password" placeholder="Enter your password"><br>
         <input class="btn" type="submit" value="Submit"/>
       </form>
-    </div>
+    </div> 
   </div>
-  
 
   <footer>
     <div id="footer1"><p>INDIA’S LARGEST HEALTHCARE PLATFORM</p><div id="footParant"><div><p><b>260M+</b></p><span>Visitors</span></div><div><p><b>31M+</b></p><span>Orders Delivers</span></div><div><p><b>1800M+</b></p><span>Cities</span></div></div></div><hr style="width: 90%; margin: auto;">
@@ -402,7 +387,6 @@
 </footer>
 </body>
 <script>
- 
   document.querySelector("form").addEventListener("submit",userSignin)
   let miltiUser =JSON.parse(localStorage.getItem("account-data")) || []
   function userSignin(e){
